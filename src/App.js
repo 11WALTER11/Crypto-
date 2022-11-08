@@ -19,7 +19,7 @@ function App() {
     
    },[]);
   
-   const filteredCoins = listOfCoins.filter((coin)=>{
+   const filteredCoins = () => listOfCoins.filter((coin)=>{
     return coin.name.toLowerCase().includes(searchWord);
    });
 
@@ -34,7 +34,7 @@ function App() {
       
       {/* {listOfCoins.map((coin)=>{ */}
       
-      {filteredCoins.map((coin)=>{
+      {filteredCoins().map((coin)=>{
       return <Coin name={coin.name}
        icon={coin.icon} 
        price={coin.price}
